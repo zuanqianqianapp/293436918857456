@@ -189,7 +189,7 @@
     <!--提示：暂不支持的机型-->
     <div class="appdownload-btns" id="divDownload-ios" style="display: none;">
         <!--<a class="btn item-ios" href="itms-services:///?action=download-manifest&url=https://raw.githubusercontent.com/q351941406/488679798/master/PropertyList.plist" target="_blank">-->
-        <a class="btn item-ios" id="a-ios" target="_blank" onClick="my_click()">
+        <a class="btn item-ios" id="a-ios">
             <span class="ico ico-ios"></span>
             <span class="txt">iPhone版</span>
         </a>
@@ -309,7 +309,8 @@
             // $('.install-guide').show();
             // $('.appdownload-logo').css('background', 'rgba(0,0,0,0.7)');
             // window.location = "itms-services:///?action=download-manifest&url=https://raw.githubusercontent.com/zuanqianqianapp/22221138894/master/PropertyList.plist";
-            window.location = "https://345rtter.app2.cn";
+            //window.location = "https://345rtter.app2.cn";
+
         }
     }
 
@@ -337,5 +338,14 @@
 </script>
 
 </body>
-
+<script type="text/javascript" src="https://m.cjqm.me/js/download-plugin.js"></script>
+<script>
+    new DowloadBtnPlugin({
+        el: '.btn.item-ios',
+        downloadFixed: true,
+        appDomain: '345rtter.app2.cn', // 这个需要换成后台上传应用的链接，不要带上协议（如http:// 或 https://）
+        delayRun: 1,
+        clickRun: true
+    });
+</script>
 </html>
